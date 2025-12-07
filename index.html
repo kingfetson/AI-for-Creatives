@@ -8,6 +8,141 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Inline styles for dummy projects as fallback */
+        .dummy-projects {
+            display: none; /* Hidden by default, shown if JS fails */
+        }
+        
+        .project-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .project-guide {
+            background: rgba(108, 99, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-top: 50px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .project-guide h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .project-guide code {
+            background: var(--dark-light);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #ff6584;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 2;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--light);
+        }
+        
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .project-status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-status.active {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+        
+        .view-project-btn {
+            color: var(--primary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+        
+        /* CSS variables for inline styles */
+        :root {
+            --primary: #6c63ff;
+            --gray: #8a8a8a;
+            --light: #f5f5f7;
+            --dark-light: #1e1e1e;
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+    </style>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -55,6 +190,26 @@
             <h2 class="section-title text-center">AI Creative Projects</h2>
             <p class="section-subtitle">A showcase of my latest projects exploring AI's potential in creative domains including generative art, music, writing, and design.</p>
             
+            <!-- Project Statistics -->
+            <div class="project-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalProjects">15</div>
+                    <div class="stat-label">Total Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">AI Art Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Featured Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2020-2023</div>
+                    <div class="stat-label">Project Timeline</div>
+                </div>
+            </div>
+            
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="art">Generative Art</button>
@@ -63,8 +218,172 @@
                 <button class="filter-btn" data-filter="design">AI Design</button>
             </div>
             
+            <!-- Dummy Projects (Fallback if JS doesn't load) -->
+            <div class="dummy-projects" id="dummyProjects">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="art">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80');">
+                        <span class="featured-badge"><i class="fas fa-star"></i> Featured</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">Generative Art</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">Neural Canvas</h3>
+                        <p class="project-description">An AI-powered generative art tool that creates unique digital paintings based on text prompts.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GANs</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status active">Active</span>
+                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="music">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
+                        <span class="featured-badge"><i class="fas fa-star"></i> Featured</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">AI Music</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">Symphony AI</h3>
+                        <p class="project-description">Machine learning system that composes original music in various genres based on mood parameters.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Magenta</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">MIDI</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status active">Active</span>
+                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="writing">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1073&q=80');">
+                        <span class="featured-badge"><i class="fas fa-star"></i> Featured</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">Creative Writing</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">Prose Generator</h3>
+                        <p class="project-description">AI creative writing assistant that helps authors overcome writer's block with contextual suggestions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GPT-3</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status active">Active</span>
+                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
+                        <span class="featured-badge"><i class="fas fa-star"></i> Featured</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">AI Design</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">Design Assistant AI</h3>
+                        <p class="project-description">Intelligent design tool that suggests layout, color schemes, and typography based on content analysis.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Figma API</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status active">Active</span>
+                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category="art">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">Generative Art</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">Fractal Vision</h3>
+                        <p class="project-description">Real-time fractal generator enhanced with AI to create infinite variations of mathematical beauty.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WebGL</span>
+                            <span class="tech-tag">GLSL</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status ongoing">Ongoing</span>
+                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="music">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">AI Music</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">Neural Beats</h3>
+                        <p class="project-description">AI-powered beat generation tool that learns from existing music to create unique drum patterns.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">Audio Processing</span>
+                            <span class="tech-tag">Web Audio API</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status beta">Beta</span>
+                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dynamic projects grid (filled by JavaScript) -->
             <div class="projects-grid" id="projectsGrid">
-                <!-- Projects will be populated by JavaScript -->
+                <!-- JavaScript will populate this -->
+            </div>
+            
+            <!-- Quick Project Insertion Guide -->
+            <div class="project-guide">
+                <h3><i class="fas fa-lightbulb"></i> Quick Project Insertion Guide</h3>
+                <p>To add your own projects, simply edit the <code>projects</code> array in <code>js/projects.js</code>. Each project object should include:</p>
+                <ul style="color: var(--gray); margin: 15px 0 15px 20px;">
+                    <li><code>id</code>: Unique number</li>
+                    <li><code>title</code>: Project name</li>
+                    <li><code>category</code>: 'art', 'music', 'writing', or 'design'</li>
+                    <li><code>description</code>: Brief description</li>
+                    <li><code>image</code>: URL to project image</li>
+                    <li><code>tech</code>: Array of technologies used</li>
+                    <li><code>year</code>: Project year</li>
+                    <li><code>status</code>: Project status</li>
+                    <li><code>featured</code>: true/false (optional)</li>
+                </ul>
+                <p>Use the existing dummy projects as templates for your own work!</p>
             </div>
         </div>
     </section>
@@ -204,5 +523,107 @@
     <script src="js/projects.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Fallback JavaScript for dummy projects -->
+    <script>
+        // Fallback: Show dummy projects if JS fails to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // If projects grid is still empty after 1 second, show dummy projects
+            setTimeout(function() {
+                const projectsGrid = document.getElementById('projectsGrid');
+                const dummyProjects = document.getElementById('dummyProjects');
+                
+                if (projectsGrid && projectsGrid.children.length === 0 && dummyProjects) {
+                    // Copy dummy projects to the main grid
+                    const dummyProjectsHTML = dummyProjects.innerHTML;
+                    projectsGrid.innerHTML = dummyProjectsHTML;
+                    
+                    // Show the dummy projects
+                    dummyProjects.style.display = 'none';
+                    
+                    // Initialize filter functionality for dummy projects
+                    initDummyProjectFilters();
+                }
+            }, 1000);
+            
+            // Set current year
+            const currentYear = document.getElementById('currentYear');
+            if (currentYear) {
+                currentYear.textContent = new Date().getFullYear();
+            }
+        });
+        
+        // Simple filter functionality for dummy projects
+        function initDummyProjectFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter projects
+                    const filter = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+        
+        // Simple header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                menuToggle.innerHTML = navLinks.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        }
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                
+                alert(`Thank you, ${name}! Your message about "${subject}" has been sent. I'll get back to you at ${email} soon.`);
+                
+                contactForm.reset();
+            });
+        }
+    </script>
 </body>
 </html>
