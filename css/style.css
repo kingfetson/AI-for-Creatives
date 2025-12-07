@@ -575,3 +575,158 @@ footer {
     color: var(--gray);
     font-size: 0.9rem;
 }
+/* ===== Enhanced Project Card Styles ===== */
+.project-card.featured {
+    border: 2px solid var(--primary);
+    position: relative;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 2;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.project-year {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--light);
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-status.active {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+}
+
+.project-status.beta {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+}
+
+.project-status.research {
+    background: rgba(33, 150, 243, 0.2);
+    color: #2196f3;
+}
+
+.project-status.exhibited {
+    background: rgba(156, 39, 176, 0.2);
+    color: #9c27b0;
+}
+
+.project-status.ongoing {
+    background: rgba(255, 87, 34, 0.2);
+    color: #ff5722;
+}
+
+.view-project-btn {
+    color: var(--primary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.view-project-btn:hover {
+    gap: 10px;
+}
+
+/* ===== Project Statistics ===== */
+.project-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* ===== Quick Project Insertion Guide ===== */
+.project-guide {
+    background: rgba(108, 99, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-top: 50px;
+    border-left: 4px solid var(--primary);
+}
+
+.project-guide h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-guide code {
+    background: var(--dark-light);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #ff6584;
+}
