@@ -1,4 +1,17 @@
 // main.js - Main JavaScript functionality
+// In main.js, ensure the modal is accessible
+function initWebsite() {
+    // ... existing code ...
+    
+    // Make sure project modal is available
+    if (typeof projectModal === 'undefined') {
+        console.warn('Project modal not initialized. Projects may not open properly.');
+    }
+    
+    // ... rest of your initialization ...
+}
+
+
 
 // DOM Elements
 const header = document.getElementById('header');

@@ -8,141 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <style>
-        /* Inline styles for dummy projects as fallback */
-        .dummy-projects {
-            display: none; /* Hidden by default, shown if JS fails */
-        }
-        
-        .project-stats {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--border-radius);
-            min-width: 150px;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        
-        .stat-label {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        .project-guide {
-            background: rgba(108, 99, 255, 0.1);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            margin-top: 50px;
-            border-left: 4px solid var(--primary);
-        }
-        
-        .project-guide h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .project-guide code {
-            background: var(--dark-light);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #ff6584;
-        }
-        
-        .featured-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--primary);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            z-index: 2;
-        }
-        
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 15px 0;
-        }
-        
-        .tech-tag {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            color: var(--light);
-        }
-        
-        .project-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .project-status {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        
-        .project-status.active {
-            background: rgba(76, 175, 80, 0.2);
-            color: #4caf50;
-        }
-        
-        .view-project-btn {
-            color: var(--primary);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: var(--transition);
-        }
-        
-        /* CSS variables for inline styles */
-        :root {
-            --primary: #6c63ff;
-            --gray: #8a8a8a;
-            --light: #f5f5f7;
-            --dark-light: #1e1e1e;
-            --border-radius: 12px;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-    </style>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -165,41 +30,54 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-    </div>
-    <div class="container">
-        <div class="hero-content-wrapper">
-            <div class="hero-content">
-                <h1>Transforming Creativity with <span class="highlight">Artificial Intelligence</span></h1>
-                <p>Exploring the intersection of AI and creativity through innovative projects that push the boundaries of art, design, and technology. I specialize in generative art, creative algorithms, and AI-powered design tools.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            
-            <!-- Passport/Profile Image -->
-            <div class="hero-image">
-                <div class="profile-image-container">
-                    <div class="profile-image">
-                        <!-- Replace with your actual image -->
-                        <img src="assets/kim professional photo.jpg" alt="AI Creative Portfolio - Profile Image">
+    <!-- Hero Section with Profile Image -->
+    <section class="hero" id="home">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content-wrapper">
+                <div class="hero-content">
+                    <h1>Transforming Creativity with <span class="highlight">Artificial Intelligence</span></h1>
+                    <p>Exploring the intersection of AI and creativity through innovative projects that push the boundaries of art, design, and technology. I specialize in generative art, creative algorithms, and AI-powered design tools.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                     </div>
-                    <div class="profile-decoration">
-                        <div class="decoration-circle"></div>
-                        <div class="decoration-circle"></div>
-                        <div class="decoration-circle"></div>
+                </div>
+                
+                <!-- Profile Image Container -->
+                <div class="hero-image">
+                    <div class="profile-image-container">
+                        <div class="profile-image">
+                            <!-- Profile image with fallback -->
+                            <<img src="assets/images/kim professional photo.jpg" alt="Your Name - AI Creative Specialist" style="width:340px; height:auto; padding:10px; ">
+                                 alt="Kim - AI Creative Specialist"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80'; this.alt='AI Creative Professional';">
+                            
+                            <!-- Status indicator -->
+                            <div class="status-indicator"></div>
+                        </div>
+                        
+                        <!-- Decorative circles -->
+                        <div class="profile-decoration">
+                            <div class="decoration-circle"></div>
+                            <div class="decoration-circle"></div>
+                            <div class="decoration-circle"></div>
+                        </div>
+                        
+                        <!-- AI Badge -->
+                        <div class="ai-badge">
+                            <i class="fas fa-robot"></i>
+                            AI Creative
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
@@ -222,6 +100,10 @@
                     <div class="stat-label">Featured Projects</div>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Video Demos</div>
+                </div>
+                <div class="stat-item">
                     <div class="stat-number">2024-2025</div>
                     <div class="stat-label">Project Timeline</div>
                 </div>
@@ -233,14 +115,24 @@
                 <button class="filter-btn" data-filter="music">AI Music</button>
                 <button class="filter-btn" data-filter="writing">Creative Writing</button>
                 <button class="filter-btn" data-filter="design">AI Design</button>
+                <button class="filter-btn" data-filter="video">Video Demos</button>
             </div>
             
-            <!-- Dummy Projects (Fallback if JS doesn't load) -->
-            <div class="dummy-projects" id="dummyProjects">
+            <!-- Dynamic projects grid -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- JavaScript will populate this -->
+            </div>
+            
+            <!-- Project Modal Container -->
+            <div id="projectModalContainer"></div>
+            
+            <!-- Dummy Projects (Hidden fallback) -->
+            <div class="dummy-projects" id="dummyProjects" style="display: none;">
                 <!-- Project 1 -->
                 <div class="project-card" data-category="art">
                     <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80');">
                         <span class="featured-badge"><i class="fas fa-star"></i> Featured</span>
+                        <span class="video-badge"><i class="fas fa-play-circle"></i> Video</span>
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -256,7 +148,9 @@
                         </div>
                         <div class="project-footer">
                             <span class="project-status active">Active</span>
-                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                            <button class="view-project-btn" data-id="1">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -280,7 +174,9 @@
                         </div>
                         <div class="project-footer">
                             <span class="project-status active">Active</span>
-                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                            <button class="view-project-btn" data-id="2">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -304,107 +200,16 @@
                         </div>
                         <div class="project-footer">
                             <span class="project-status active">Active</span>
-                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                            <button class="view-project-btn" data-id="3">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card" data-category="design">
-                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
-                        <span class="featured-badge"><i class="fas fa-star"></i> Featured</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <span class="project-category">AI Design</span>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <h3 class="project-title">Design Assistant AI</h3>
-                        <p class="project-description">Intelligent design tool that suggests layout, color schemes, and typography based on content analysis.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Figma API</span>
-                            <span class="tech-tag">React</span>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-status active">Active</span>
-                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="project-card" data-category="art">
-                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <span class="project-category">Generative Art</span>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <h3 class="project-title">Fractal Vision</h3>
-                        <p class="project-description">Real-time fractal generator enhanced with AI to create infinite variations of mathematical beauty.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">WebGL</span>
-                            <span class="tech-tag">GLSL</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-status ongoing">Ongoing</span>
-                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="project-card" data-category="music">
-                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <span class="project-category">AI Music</span>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <h3 class="project-title">Neural Beats</h3>
-                        <p class="project-description">AI-powered beat generation tool that learns from existing music to create unique drum patterns.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">LSTM</span>
-                            <span class="tech-tag">Audio Processing</span>
-                            <span class="tech-tag">Web Audio API</span>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-status beta">Beta</span>
-                            <a href="#" class="view-project-btn">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Dynamic projects grid (filled by JavaScript) -->
-            <div class="projects-grid" id="projectsGrid">
-                <!-- JavaScript will populate this -->
-            </div>
-            
-            <!-- Quick Project Insertion Guide 
-            <div class="project-guide">
-                <h3><i class="fas fa-lightbulb"></i> Quick Project Insertion Guide</h3>
-                <p>To add your own projects, simply edit the <code>projects</code> array in <code>js/projects.js</code>. Each project object should include:</p>
-                <ul style="color: var(--gray); margin: 15px 0 15px 20px;">
-                    <li><code>id</code>: Unique number</li>
-                    <li><code>title</code>: Project name</li>
-                    <li><code>category</code>: 'art', 'music', 'writing', or 'design'</li>
-                    <li><code>description</code>: Brief description</li>
-                    <li><code>image</code>: URL to project image</li>
-                    <li><code>tech</code>: Array of technologies used</li>
-                    <li><code>year</code>: Project year</li>
-                    <li><code>status</code>: Project status</li>
-                    <li><code>featured</code>: true/false (optional)</li>
-                </ul>
-                <p>Use the existing dummy projects as templates for your own work!</p>
             </div>
         </div>
     </section>
--->
+
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
@@ -414,8 +219,8 @@
                     <h3><u>Exploring the Frontiers of AI-Driven Creativity</u></h3>
                     <p>I'm a creative technologist specializing in leveraging artificial intelligence to create unique artistic expressions, design tools, and interactive experiences.</p>
                     <p>By blending human creativity with AI tools, I focus on meaning and expression while letting technology handle the technical. Every project I share tells a story — a narrative of taste, clarity, and purpose.</p>
-
-                  <div class="skills">
+                    
+                    <div class="skills">
                         <div class="skill-item">
                             <div class="skill-name">
                                 <span>Generative Art & Design</span>
@@ -526,6 +331,7 @@
                         <li><a href="#projects" data-filter="music">AI Music</a></li>
                         <li><a href="#projects" data-filter="writing">Creative Writing</a></li>
                         <li><a href="#projects" data-filter="design">AI Design</a></li>
+                        <li><a href="#projects" data-filter="video">Video Demos</a></li>
                     </ul>
                 </div>
             </div>
@@ -538,109 +344,455 @@
 
     <!-- JavaScript Files -->
     <script src="js/projects.js"></script>
+    <script src="js/project-modal.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
-    
-    <!-- Fallback JavaScript for dummy projects -->
+
+    <!-- Main Initialization Script -->
     <script>
-        // Fallback: Show dummy projects if JS fails to load
+        // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // If projects grid is still empty after 1 second, show dummy projects
-            setTimeout(function() {
-                const projectsGrid = document.getElementById('projectsGrid');
-                const dummyProjects = document.getElementById('dummyProjects');
-                
-                if (projectsGrid && projectsGrid.children.length === 0 && dummyProjects) {
-                    // Copy dummy projects to the main grid
-                    const dummyProjectsHTML = dummyProjects.innerHTML;
-                    projectsGrid.innerHTML = dummyProjectsHTML;
-                    
-                    // Show the dummy projects
-                    dummyProjects.style.display = 'none';
-                    
-                    // Initialize filter functionality for dummy projects
-                    initDummyProjectFilters();
-                }
-            }, 1000);
+            console.log('🚀 Portfolio Initializing...');
             
-            // Set current year
+            // Set current year in footer
             const currentYear = document.getElementById('currentYear');
             if (currentYear) {
                 currentYear.textContent = new Date().getFullYear();
             }
+            
+            // Initialize mobile menu
+            initMobileMenu();
+            
+            // Initialize header scroll effect
+            initHeaderScroll();
+            
+            // Initialize contact form
+            initContactForm();
+            
+            // Profile image loading check
+            initProfileImage();
+            
+            // Check if projects loaded successfully
+            checkProjectsLoad();
+            
+            // Debug info
+            logDebugInfo();
+            
+            // Add test button for debugging
+            addTestButton();
         });
         
-        // Simple filter functionality for dummy projects
+        // Mobile menu functionality
+        function initMobileMenu() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    menuToggle.innerHTML = navLinks.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // Close mobile menu when clicking a link
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+        }
+        
+        // Header scroll effect
+        function initHeaderScroll() {
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('header');
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+        
+        // Contact form submission
+        function initContactForm() {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    
+                    // In a real app, you would send this to a server
+                    alert(`Thank you, ${name}! Your message about "${subject}" has been sent. I'll get back to you at ${email} soon.`);
+                    
+                    contactForm.reset();
+                });
+            }
+        }
+        
+        // Profile image loading with fallback
+        function initProfileImage() {
+            const profileImg = document.querySelector('.profile-image img');
+            if (profileImg) {
+                profileImg.onload = function() {
+                    console.log('✅ Profile image loaded successfully');
+                };
+                
+                profileImg.onerror = function() {
+                    console.log('⚠️ Profile image failed to load, using fallback');
+                    this.src = 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80';
+                    this.alt = 'AI Creative Professional';
+                };
+            }
+        }
+        
+        // Check if projects loaded
+        function checkProjectsLoad() {
+            setTimeout(function() {
+                const projectsGrid = document.getElementById('projectsGrid');
+                const dummyProjects = document.getElementById('dummyProjects');
+                
+                if (projectsGrid && projectsGrid.children.length === 0) {
+                    console.log('⚠️ No projects loaded, showing dummy projects');
+                    if (dummyProjects && dummyProjects.children.length > 0) {
+                        projectsGrid.innerHTML = dummyProjects.innerHTML;
+                        dummyProjects.style.display = 'none';
+                        initDummyProjectFilters();
+                        attachDummyProjectClicks();
+                    }
+                } else if (projectsGrid && projectsGrid.children.length > 0) {
+                    console.log(`✅ Projects loaded successfully: ${projectsGrid.children.length} projects`);
+                }
+            }, 2000);
+        }
+        
+        // Filter for dummy projects
         function initDummyProjectFilters() {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
             
             filterButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    // Update active button
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Filter projects
                     const filter = this.getAttribute('data-filter');
-                    
                     projectCards.forEach(card => {
-                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
+                        card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) 
+                            ? 'block' 
+                            : 'none';
                     });
                 });
             });
         }
         
-        // Simple header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-                menuToggle.innerHTML = navLinks.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
+        // Click handlers for dummy projects
+        function attachDummyProjectClicks() {
+            document.querySelectorAll('.view-project-btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const projectId = this.getAttribute('data-id');
+                    const projectCard = this.closest('.project-card');
+                    const title = projectCard.querySelector('.project-title').textContent;
+                    const description = projectCard.querySelector('.project-description').textContent;
+                    const category = projectCard.querySelector('.project-category').textContent;
+                    
+                    // Create a simple modal for dummy projects
+                    createSimpleModal(title, description, category);
+                });
             });
             
-            // Close mobile menu when clicking a link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            // Also make entire cards clickable
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.closest('.view-project-btn')) {
+                        const title = this.querySelector('.project-title').textContent;
+                        const description = this.querySelector('.project-description').textContent;
+                        const category = this.querySelector('.project-category').textContent;
+                        
+                        createSimpleModal(title, description, category);
+                    }
                 });
             });
         }
         
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                
-                alert(`Thank you, ${name}! Your message about "${subject}" has been sent. I'll get back to you at ${email} soon.`);
-                
-                contactForm.reset();
+        // Simple modal for dummy projects
+        function createSimpleModal(title, description, category) {
+            const modalHTML = `
+                <div class="simple-modal" style="
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2000;
+                    padding: 20px;
+                ">
+                    <div style="
+                        background: #121212;
+                        padding: 40px;
+                        border-radius: 12px;
+                        max-width: 600px;
+                        width: 100%;
+                        max-height: 80vh;
+                        overflow-y: auto;
+                        position: relative;
+                        border: 1px solid #6c63ff;
+                    ">
+                        <button onclick="this.parentElement.parentElement.remove()" style="
+                            position: absolute;
+                            top: 20px;
+                            right: 20px;
+                            background: #6c63ff;
+                            color: white;
+                            border: none;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            font-size: 1.2rem;
+                        ">×</button>
+                        
+                        <h2 style="color: #6c63ff; margin-bottom: 20px; font-size: 2rem;">${title}</h2>
+                        <div style="
+                            background: rgba(108, 99, 255, 0.1);
+                            color: #6c63ff;
+                            padding: 8px 16px;
+                            border-radius: 20px;
+                            display: inline-block;
+                            margin-bottom: 20px;
+                            font-size: 0.9rem;
+                        ">${category}</div>
+                        
+                        <p style="color: #8a8a8a; margin-bottom: 30px; line-height: 1.6; font-size: 1.1rem;">${description}</p>
+                        
+                        <div style="margin: 20px 0;">
+                            <h3 style="color: white; margin-bottom: 15px; font-size: 1.3rem;">Technologies Used</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span style="
+                                    background: rgba(108, 99, 255, 0.2);
+                                    color: #6c63ff;
+                                    padding: 8px 16px;
+                                    border-radius: 20px;
+                                    font-size: 0.9rem;
+                                ">AI Technology</span>
+                                <span style="
+                                    background: rgba(108, 99, 255, 0.2);
+                                    color: #6c63ff;
+                                    padding: 8px 16px;
+                                    border-radius: 20px;
+                                    font-size: 0.9rem;
+                                ">Python</span>
+                                <span style="
+                                    background: rgba(108, 99, 255, 0.2);
+                                    color: #6c63ff;
+                                    padding: 8px 16px;
+                                    border-radius: 20px;
+                                    font-size: 0.9rem;
+                                ">Machine Learning</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: flex-end; gap: 15px; margin-top: 30px;">
+                            <button onclick="this.parentElement.parentElement.remove()" style="
+                                background: #6c63ff;
+                                color: white;
+                                border: none;
+                                padding: 12px 30px;
+                                border-radius: 25px;
+                                cursor: pointer;
+                                font-family: 'Poppins', sans-serif;
+                                font-size: 1rem;
+                                transition: all 0.3s ease;
+                            " onmouseover="this.style.background='#554fd8'" onmouseout="this.style.background='#6c63ff'">Close</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            const modalContainer = document.createElement('div');
+            modalContainer.innerHTML = modalHTML;
+            document.body.appendChild(modalContainer);
+            document.body.style.overflow = 'hidden';
+            
+            // Close on escape key
+            const closeModal = function(e) {
+                if (e.key === 'Escape') {
+                    modalContainer.remove();
+                    document.body.style.overflow = 'auto';
+                    document.removeEventListener('keydown', closeModal);
+                }
+            };
+            document.addEventListener('keydown', closeModal);
+            
+            // Close on overlay click
+            modalContainer.querySelector('.simple-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    modalContainer.remove();
+                    document.body.style.overflow = 'auto';
+                    document.removeEventListener('keydown', closeModal);
+                }
             });
         }
+        
+        // Debug information
+        function logDebugInfo() {
+            console.log('🔍 Debug Information:');
+            console.log('- Projects array:', typeof projects !== 'undefined' ? 'Loaded' : 'Not loaded');
+            console.log('- ProjectModal class:', typeof ProjectModal !== 'undefined' ? 'Loaded' : 'Not loaded');
+            console.log('- projectModal instance:', typeof projectModal !== 'undefined' ? 'Available' : 'Not available');
+            console.log('- window.projectModal:', typeof window.projectModal !== 'undefined' ? 'Available' : 'Not available');
+            
+            // Check if modal container exists
+            const modalContainer = document.getElementById('projectModalContainer');
+            console.log('- Modal container:', modalContainer ? 'Exists' : 'Missing');
+        }
+        
+        // Add test button for debugging
+        function addTestButton() {
+            // Only add in development
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                const testBtn = document.createElement('button');
+                testBtn.id = 'debugTestBtn';
+                testBtn.textContent = '🔧 Test Modal';
+                testBtn.style.cssText = `
+                    position: fixed;
+                    bottom: 70px;
+                    right: 20px;
+                    background: linear-gradient(45deg, #6c63ff, #ff6584);
+                    color: white;
+                    border: none;
+                    padding: 12px 20px;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    z-index: 9998;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+                    transition: all 0.3s ease;
+                `;
+                
+                testBtn.onmouseover = function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 8px 20px rgba(108, 99, 255, 0.4)';
+                };
+                
+                testBtn.onmouseout = function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 5px 15px rgba(108, 99, 255, 0.3)';
+                };
+                
+                testBtn.onclick = function() {
+                    console.log('🧪 Testing modal system...');
+                    
+                    // Try to use the real modal system first
+                    if (window.projectModal && typeof window.projectModal.openModal === 'function') {
+                        console.log('Using real modal system');
+                        // Create a test project
+                        const testProject = {
+                            id: 999,
+                            title: "Test Project",
+                            category: "art",
+                            description: "This is a test project to verify the modal system is working correctly.",
+                            image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e",
+                            tech: ["Test", "JavaScript", "HTML/CSS"],
+                            status: "Test",
+                            year: "2024",
+                            featured: true
+                        };
+                        window.projectModal.openModal(testProject);
+                    } 
+                    // Try debug projects
+                    else if (window.debugProjects && window.debugProjects.projects && window.debugProjects.projects.length > 0) {
+                        console.log('Using debug projects');
+                        const firstProject = window.debugProjects.projects[0];
+                        if (window.debugProjects.openProjectModal) {
+                            window.debugProjects.openProjectModal(firstProject);
+                        } else {
+                            createSimpleModal(firstProject.title, firstProject.description, "Generative Art");
+                        }
+                    }
+                    // Fallback to simple modal
+                    else {
+                        console.log('Using fallback simple modal');
+                        createSimpleModal(
+                            "Test Project - Neural Canvas",
+                            "An AI-powered generative art tool that creates unique digital paintings based on text prompts. This is a test to verify the modal system is working.",
+                            "Generative Art"
+                        );
+                    }
+                };
+                
+                document.body.appendChild(testBtn);
+            }
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Filter links in footer
+        document.querySelectorAll('.footer-links a[data-filter]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const filter = this.getAttribute('data-filter');
+                
+                // Find and click the corresponding filter button
+                const filterButton = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+                if (filterButton) {
+                    filterButton.click();
+                    
+                    // Scroll to projects section
+                    const projectsSection = document.getElementById('projects');
+                    if (projectsSection) {
+                        window.scrollTo({
+                            top: projectsSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Add hover effect to project cards (enhancement)
+        document.addEventListener('mouseover', function(e) {
+            const projectCard = e.target.closest('.project-card');
+            if (projectCard) {
+                projectCard.style.zIndex = '10';
+            }
+        }, true);
+        
+        document.addEventListener('mouseout', function(e) {
+            const projectCard = e.target.closest('.project-card');
+            if (projectCard && !projectCard.matches(':hover')) {
+                projectCard.style.zIndex = '';
+            }
+        }, true);
     </script>
 </body>
 </html>
